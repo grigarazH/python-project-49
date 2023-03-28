@@ -2,6 +2,21 @@ import random
 import prompt
 
 
+def welcome_user(name):
+    print("Welcome to the Brain Games!")
+    name = prompt.string("May I have your name? ")
+    print(f"Hello, {name}!")
+
+
+def print_game_description(game):
+    if game == "even":
+        print('Answer "yes" if the number is even, otherwise answer "no"')
+    elif game == "calc":
+        print("What is the result of the expression?")
+    else:
+        print("Error")
+
+
 def get_even_correct_answer(question):
     """returns correct answer for is even question"""
 
@@ -35,30 +50,32 @@ def get_calc_question():
     return f"{num1} {operator} {num2}"
 
 
+def get_question(game):
+    if game == "even":
+        return get_even_question()
+    elif game == "calc":
+        return get_calc_question()
+
+
+def get_answer(game, question):
+    if game == "even":
+        return get_even_correct_answer(question)
+    elif game == "calc":
+        return get_calc_correct_answer(question)
+
+
 def play_game(game):
     """launches a game matching string argument"""
 
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    if game == "even":
-        print('Answer "yes" if the number is even, otherwise answer "no"')
-    elif game == "calc":
-        print("What is the result of the expression?")
-    else:
-        print("Error")
+    name = ""
+    welcome_user(name)
+    print_game_description(game)
     i = 0
     while i < 3:
-        if game == "even":
-            question = get_even_question()
-        elif game == "calc":
-            question = get_calc_question()
+        question = get_question(game)
         print(f"Question: {question}")
         answer = prompt.string("Your answer: ")
-        if game == "even":
-            correct_answer = get_even_correct_answer(question)
-        elif game == "calc":
-            correct_answer = get_calc_correct_answer(question)
+        correct_answer = get_answer(game, question)
         if str(answer) == str(correct_answer):
             print("Correct!")
         else:
