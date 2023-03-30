@@ -14,7 +14,7 @@ def print_game_description(game):
     """returns description for chosen game type"""
 
     if game == "even":
-        print('Answer "yes" if the number is even, otherwise answer "no"')
+        print('Answer "yes" if the number is even, otherwise answer "no".')
     elif game == "calc":
         print("What is the result of the expression?")
     elif game == "gcd":
