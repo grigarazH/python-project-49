@@ -2,6 +2,15 @@ import random
 import prompt
 
 
+PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
+                41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83,
+                89, 97, 101, 103, 107, 109, 113, 127, 131, 
+                137, 139, 149, 151, 157, 163, 167, 173, 179, 
+                181, 191, 193, 197, 199, 211, 223, 227, 229, 
+                233, 239, 241, 251, 257, 263, 269, 271]
+
+
+
 def print_game_description(game):
     """returns description for chosen game type"""
 
@@ -13,6 +22,8 @@ def print_game_description(game):
         print("Find the greatest common divisor of given numbers.")
     elif game == "progression":
         print("What number is missing in the progression?")
+    elif game == "prime":
+        print('Answer "yes" if given number is prime. Otherwise answer "no".')
     else:
         print("Error")
 
@@ -109,6 +120,19 @@ def get_progression_question():
     return " ".join(progression)
 
 
+
+def get_prime_correct_answer(question):
+    """returns correct answer for prime question"""
+
+    return "yes" if int(question) in PRIME_NUMBERS else "no"
+
+
+def get_prime_question():
+    """returns random prime question"""
+
+    return random.randint(0, 271)
+
+
 def get_question(game):
     """returns random question for chosen game type"""
 
@@ -120,6 +144,8 @@ def get_question(game):
         return get_gcd_question()
     elif game == "progression":
         return get_progression_question()
+    elif game == "prime":
+        return get_prime_question()
 
 
 def get_correct_answer(game, question):
@@ -133,6 +159,8 @@ def get_correct_answer(game, question):
         return get_gcd_correct_answer(question)
     elif game == "progression":
         return get_progression_correct_answer(question)
+    elif game == "prime":
+        return get_prime_correct_answer(question)
 
 
 def play_game(game):
