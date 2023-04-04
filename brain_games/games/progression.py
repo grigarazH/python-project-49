@@ -18,12 +18,18 @@ def get_progression_correct_answer(question):
 
 def get_progression_question():
     """returns random progression question"""
-
-    length = random.randint(5, 10)
+    min_length = 5
+    max_length = 10
+    length = random.randint(min_length, max_length)
     hidden_index = random.randint(0, length - 1)
     progression = []
-    progression_step = random.randint(1, 10)
-    progression.append(str(random.randint(0, 100)))
+    progression_min_step = 1
+    progression_max_step = 10
+    progression_step = random.randint(progression_min_step,
+                                      progression_max_step)
+    progression_start_max = 100
+    progression_start = random.randint(0, progression_start_max)
+    progression.append(str(progression_start))
     i = 1
     while i < length:
         progression.append(str(int(progression[i - 1]) + progression_step))

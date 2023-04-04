@@ -9,5 +9,6 @@ def get_even_correct_answer(question):
 
 def get_even_question():
     """returns random is even question"""
-
-    return random.randint(0, 100)
+    min = 0
+    max = 100
+    return random.randint(min, max)

@@ -23,7 +23,8 @@ def get_gcd_correct_answer(question):
 
 def get_gcd_question():
     """returns random gcd question"""
-
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
+    min = 1
+    max = 100
+    num1 = random.randint(min, max)
+    num2 = random.randint(min, max)
     return f"{num1} {num2}"

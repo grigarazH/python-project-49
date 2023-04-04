@@ -15,5 +15,6 @@ def get_prime_correct_answer(question):
 
 def get_prime_question():
     """returns random prime question"""
-
-    return random.randint(0, 271)
+    min = 0
+    max = 271
+    return random.randint(min, max)

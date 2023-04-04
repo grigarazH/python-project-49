@@ -64,8 +64,9 @@ def play_game(game):
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print_game_description(game)
+    question_count = 3
     i = 0
-    while i < 3:
+    while i < question_count:
         question = get_question(game)
         print(f"Question: {question}")
         answer = prompt.string("Your answer: ")

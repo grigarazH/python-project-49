@@ -15,8 +15,9 @@ def get_calc_correct_answer(question):
 
 def get_calc_question():
     """returns random calc question"""
-
-    num1 = random.randint(0, 100)
-    num2 = random.randint(0, 100)
+    min = 0
+    max = 100
+    num1 = random.randint(min, max)
+    num2 = random.randint(min, max)
     operator = random.choice(["+", "-", "*"])
     return f"{num1} {operator} {num2}"
