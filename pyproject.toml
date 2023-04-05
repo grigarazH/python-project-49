@@ -1,14 +1,24 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.7.0"
-description = ""
-authors = ["grigarazh <grigarazh@yandex.ru>"]
+description = "Math games collection"
+authors = ["Grigory Sukhotin <grigarazh@yandex.ru>"]
+classifiers = [
+    "Topic :: Games/Entertainment :: Puzzle Games",
+    "Topic :: Education"
+]
 readme = "README.md"
 packages = [{include = "brain_games"}]
+repository = "https://github.com/grigarazh/python-project-49"
+
 
 [tool.poetry.dependencies]
 python = "^3.11"
 prompt = "^0.4.1"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
 
 
 [tool.poetry.scripts]
@@ -19,9 +29,6 @@ brain-gcd = "brain_games.scripts.brain_gcd:main"
 brain-progression = "brain_games.scripts.brain_progression:main"
 brain-prime = "brain_games.scripts.brain_prime:main"
 
-
-[tool.poetry.group.dev.dependencies]
-flake8 = "^6.0.0"
 
 [build-system]
 requires = ["poetry-core"]
