@@ -8,7 +8,7 @@ This package contains the following games:
 * brain-calc – calculating result of given expression;
 * brain-gcd – calculating greatest common divisor of two numbers
 * brain-progression – calculating the missing member of arithmetical progression
-* brain-primce - checking if given number is prime.
+* brain-prime - checking if given number is prime.
 
 ## Installation
 
