@@ -12,7 +12,7 @@ This package contains the following games:
 
 ## Installation
 
-1. Go to build directory
+1. Go to source directory
 2. Run
    
 ```
