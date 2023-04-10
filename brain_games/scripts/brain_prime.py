@@ -2,10 +2,13 @@
 
 
 from brain_games.games.common import play_game
+from brain_games.games.prime import get_question, get_correct_answer 
+from brain_games.games.prime import get_question_string, DESCRIPTION
 
 
 def main():
-    play_game("prime")
+    game = (get_question, get_correct_answer, get_question_string, DESCRIPTION)
+    play_game(game)
 
 
 if __name__ == "__main__":

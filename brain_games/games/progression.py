@@ -10,22 +10,14 @@ PROGRESSION_START_MAX = 100
 DESCRIPTION = "What number is missing in the progression?"
 
 
-def get_progression_correct_answer(question):
+def get_correct_answer(question):
     """returns correct answer for progression question"""
 
-    prog = question.split(" ")
-    for (index, item) in enumerate(prog):
-        if item == "..":
-            answer_index = index
-    if answer_index == 0:
-        return int(prog[1]) - (int(prog[2]) - int(prog[1]))
-    if answer_index == 1:
-        return int(prog[0]) + (int(prog[3]) - int(prog[2]))
-    else:
-        return int(prog[answer_index - 1]) + (int(prog[1]) - int(prog[0]))
+    (prog, answer_index) = question
+    return prog[answer_index]
 
 
-def get_progression_question():
+def get_question():
     """returns random progression question"""
 
     length = random.randint(MIN_LENGTH, MAX_LENGTH)
@@ -40,5 +32,13 @@ def get_progression_question():
     while i < length:
         progression.append(str(int(progression[i - 1]) + progression_step))
         i += 1
-    progression[hidden_index] = ".."
-    return " ".join(progression)
+    return (progression, hidden_index)
+
+
+def get_question_string(question):
+    (prog, hidden_index) = question
+    prog_copy = []
+    for i, val in enumerate(prog):
+        copy_elem = ".." if i == hidden_index else val
+        prog_copy.append(copy_elem)
+    return " ".join(prog_copy)

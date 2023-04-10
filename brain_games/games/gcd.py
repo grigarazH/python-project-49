@@ -19,16 +19,21 @@ def get_gcd(a, b):
     return num1 + num2
 
 
-def get_gcd_correct_answer(question):
+def get_correct_answer(question):
     """returns correct answer for gcd question"""
 
-    [num1, num2] = question.split(" ")
-    return get_gcd(int(num1), int(num2))
+    (num1, num2) = question
+    return get_gcd(num1, num2)
 
 
-def get_gcd_question():
+def get_question():
     """returns random gcd question"""
 
     num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    return (num1, num2)
+
+
+def get_question_string(question):
+    (num1, num2) = question
     return f"{num1} {num2}"
