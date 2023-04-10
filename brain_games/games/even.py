@@ -20,5 +20,5 @@ def get_question():
 
 def get_question_string(question):
     """returns even question string"""
-    
+
     return str(question)

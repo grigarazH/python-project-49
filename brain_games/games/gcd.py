@@ -36,6 +36,6 @@ def get_question():
 
 def get_question_string(question):
     """returns gcd question string"""
-    
+
     (num1, num2) = question
     return f"{num1} {num2}"

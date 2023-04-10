@@ -26,5 +26,5 @@ def get_question():
 
 def get_question_string(question):
     """returns prime question string"""
-    
+
     return str(question)
