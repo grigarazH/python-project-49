@@ -1,6 +1,10 @@
 import random
 
 
+MIN_NUMBER = 0
+MAX_NUMBER = 100
+
+
 def get_even_correct_answer(question):
     """returns correct answer for is even question"""
 
@@ -9,6 +13,5 @@ def get_even_correct_answer(question):
 
 def get_even_question():
     """returns random is even question"""
-    min = 0
-    max = 100
-    return random.randint(min, max)
+
+    return random.randint(MIN_NUMBER, MAX_NUMBER)

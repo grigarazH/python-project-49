@@ -1,6 +1,10 @@
 import random
 
 
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
+
 def get_gcd(a, b):
     """returns greatest common divisor of arguments"""
 
@@ -23,8 +27,7 @@ def get_gcd_correct_answer(question):
 
 def get_gcd_question():
     """returns random gcd question"""
-    min = 1
-    max = 100
-    num1 = random.randint(min, max)
-    num2 = random.randint(min, max)
+
+    num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     return f"{num1} {num2}"

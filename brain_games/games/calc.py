@@ -1,5 +1,8 @@
 import random
 
+MIN_NUMBER = 0
+MAX_NUMBER = 100
+
 
 def get_calc_correct_answer(question):
     """returns correct answer for calc question"""
@@ -15,9 +18,8 @@ def get_calc_correct_answer(question):
 
 def get_calc_question():
     """returns random calc question"""
-    min = 0
-    max = 100
-    num1 = random.randint(min, max)
-    num2 = random.randint(min, max)
+
+    num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     operator = random.choice(["+", "-", "*"])
     return f"{num1} {operator} {num2}"
