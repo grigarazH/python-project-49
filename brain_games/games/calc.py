@@ -27,5 +27,6 @@ def get_question():
 
 
 def get_question_string(question):
+    """returns calc question string"""
     (num1, num2, operator) = question
     return f"{num1} {operator} {num2}"

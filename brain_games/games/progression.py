@@ -36,6 +36,8 @@ def get_question():
 
 
 def get_question_string(question):
+    """returns progression question string"""
+    
     (prog, hidden_index) = question
     prog_copy = []
     for i, val in enumerate(prog):
