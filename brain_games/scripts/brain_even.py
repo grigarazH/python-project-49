@@ -7,9 +7,9 @@ from brain_games.games.even import get_even_question_string, DESCRIPTION
 
 
 def main():
-    game = (get_even_question, get_even_correct_answer,
+    even_game = (get_even_question, get_even_correct_answer,
             get_even_question_string, DESCRIPTION)
-    play_game(game)
+    play_game(even_game)
 
 
 if __name__ == "__main__":

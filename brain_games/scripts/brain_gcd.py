@@ -7,9 +7,9 @@ from brain_games.games.gcd import get_gcd_question_string, DESCRIPTION
 
 
 def main():
-    game = (get_gcd_question, get_gcd_correct_answer,
+    gcd_game = (get_gcd_question, get_gcd_correct_answer,
             get_gcd_question_string, DESCRIPTION)
-    play_game(game)
+    play_game(gcd_game)
 
 
 if __name__ == "__main__":

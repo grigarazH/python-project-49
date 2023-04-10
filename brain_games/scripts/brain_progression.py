@@ -9,9 +9,9 @@ from brain_games.games.progression import DESCRIPTION
 
 
 def main():
-    game = (get_progression_question, get_progression_correct_answer,
+    prog_game = (get_progression_question, get_progression_correct_answer,
             get_progression_question_string, DESCRIPTION)
-    play_game(game)
+    play_game(prog_game)
 
 
 if __name__ == "__main__":
