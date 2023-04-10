@@ -4,6 +4,7 @@
 from brain_games.engine import play_game
 import brain_games.games.progression as progression
 
+
 def main():
     play_game(progression)
 
