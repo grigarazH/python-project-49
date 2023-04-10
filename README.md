@@ -10,12 +10,18 @@ This package contains the following games:
 * brain-progression – calculating the missing member of arithmetical progression
 * brain-prime - checking if given number is prime.
 
+## Requirements
+
+* Python 3.11+
+* Poetry 1.4.1+
+
 ## Installation
 
 1. Go to source directory
 2. Run
    
 ```
+make install
 make build
 make package-install
 ```
