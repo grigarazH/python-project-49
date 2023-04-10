@@ -2,7 +2,7 @@ import prompt
 
 
 def play_game(game):
-    """launches a game matching tuple argument"""
+    """launches a game matching argument"""
 
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
