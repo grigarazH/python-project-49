@@ -3,6 +3,7 @@ import random
 
 MIN_NUMBER = 1
 MAX_NUMBER = 100
+DESCRIPTION = "Find the greatest common divisor of given numbers."
 
 
 def get_gcd(a, b):

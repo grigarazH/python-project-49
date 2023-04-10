@@ -9,6 +9,7 @@ PRIME_NUMBERS = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
                  233, 239, 241, 251, 257, 263, 269, 271)
 MIN_NUMBER = 0
 MAX_NUMBER = 271
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_prime_correct_answer(question):

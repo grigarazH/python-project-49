@@ -2,6 +2,7 @@ import random
 
 MIN_NUMBER = 0
 MAX_NUMBER = 100
+DESCRIPTION = "What is the result of the expression?"
 
 
 def get_calc_correct_answer(question):

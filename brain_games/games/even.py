@@ -3,6 +3,7 @@ import random
 
 MIN_NUMBER = 0
 MAX_NUMBER = 100
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_even_correct_answer(question):

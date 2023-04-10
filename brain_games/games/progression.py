@@ -7,6 +7,7 @@ PROGRESSION_MIN_STEP = 1
 PROGRESSION_MAX_STEP = 10
 PROGRESSION_START_MIN = 0
 PROGRESSION_START_MAX = 100
+DESCRIPTION = "What number is missing in the progression?"
 
 
 def get_progression_correct_answer(question):
