@@ -5,7 +5,7 @@ MAX_NUMBER = 100
 DESCRIPTION = "What is the result of the expression?"
 
 
-def get_calc_correct_answer(question):
+def get_correct_answer(question):
     """returns correct answer for calc question"""
 
     (num1, num2, operator) = question
@@ -17,7 +17,7 @@ def get_calc_correct_answer(question):
         return num1 * num2
 
 
-def get_calc_question():
+def get_question():
     """returns random calc question"""
 
     num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
@@ -26,7 +26,7 @@ def get_calc_question():
     return (num1, num2, operator)
 
 
-def get_calc_question_string(question):
+def get_question_string(question):
     """returns calc question string"""
     (num1, num2, operator) = question
     return f"{num1} {operator} {num2}"

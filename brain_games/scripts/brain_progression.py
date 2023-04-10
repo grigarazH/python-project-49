@@ -2,16 +2,10 @@
 
 
 from brain_games.engine import play_game
-from brain_games.games.progression import get_progression_question
-from brain_games.games.progression import get_progression_correct_answer
-from brain_games.games.progression import get_progression_question_string
-from brain_games.games.progression import DESCRIPTION
-
+import brain_games.games.progression as progression
 
 def main():
-    prog_game = (get_progression_question, get_progression_correct_answer,
-            get_progression_question_string, DESCRIPTION)
-    play_game(prog_game)
+    play_game(progression)
 
 
 if __name__ == "__main__":

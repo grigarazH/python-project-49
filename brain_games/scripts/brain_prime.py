@@ -2,14 +2,11 @@
 
 
 from brain_games.engine import play_game
-from brain_games.games.prime import get_prime_question, get_prime_correct_answer
-from brain_games.games.prime import get_prime_question_string, DESCRIPTION
+import brain_games.games.prime as prime
 
 
 def main():
-    prime_game = (get_prime_question, get_prime_correct_answer,
-            get_prime_question_string, DESCRIPTION)
-    play_game(prime_game)
+    play_game(prime)
 
 
 if __name__ == "__main__":

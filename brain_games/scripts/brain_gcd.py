@@ -2,14 +2,11 @@
 
 
 from brain_games.engine import play_game
-from brain_games.games.gcd import get_gcd_question, get_gcd_correct_answer
-from brain_games.games.gcd import get_gcd_question_string, DESCRIPTION
+import brain_games.games.gcd as gcd
 
 
 def main():
-    gcd_game = (get_gcd_question, get_gcd_correct_answer,
-            get_gcd_question_string, DESCRIPTION)
-    play_game(gcd_game)
+    play_game(gcd)
 
 
 if __name__ == "__main__":
