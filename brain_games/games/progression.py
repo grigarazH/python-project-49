@@ -10,14 +10,14 @@ PROGRESSION_START_MAX = 100
 DESCRIPTION = "What number is missing in the progression?"
 
 
-def get_correct_answer(question):
+def get_progression_correct_answer(question):
     """returns correct answer for progression question"""
 
     (prog, answer_index) = question
     return prog[answer_index]
 
 
-def get_question():
+def get_progression_question():
     """returns random progression question"""
 
     length = random.randint(MIN_LENGTH, MAX_LENGTH)
@@ -35,7 +35,7 @@ def get_question():
     return (progression, hidden_index)
 
 
-def get_question_string(question):
+def get_progression_question_string(question):
     """returns progression question string"""
 
     (prog, hidden_index) = question
