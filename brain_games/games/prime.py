@@ -18,4 +18,4 @@ def get_game():
     rand_num = random.randint(MIN_NUMBER, MAX_NUMBER)
     correct_answer = "yes" if rand_num in PRIME_NUMBERS else "no"
     question_string = str(rand_num)
-    return (question_string, correct_answer)
+    return question_string, correct_answer

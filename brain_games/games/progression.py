@@ -42,4 +42,4 @@ def get_game():
     progression = get_progression(progression_start, progression_step, length)
     correct_answer = progression[hidden_index]
     question_string = get_question_string(progression, hidden_index)
-    return (question_string, correct_answer)
+    return question_string, correct_answer

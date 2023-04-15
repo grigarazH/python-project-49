@@ -8,7 +8,7 @@ DESCRIPTION = "What is the result of the expression?"
 def calculate_expression(expression):
     """returns correct answer for calc question"""
 
-    (num1, num2, operator) = expression
+    num1, num2, operator = expression
     if operator == "+":
         return num1 + num2
     elif operator == "-":
@@ -26,4 +26,4 @@ def get_game():
     expression = (rand_num1, rand_num2, rand_operator)
     correct_answer = calculate_expression(expression)
     question_string = f"{rand_num1} {rand_operator} {rand_num2}"
-    return (question_string, correct_answer)
+    return question_string, correct_answer

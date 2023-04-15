@@ -26,4 +26,4 @@ def get_game():
     rand_num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     correct_answer = get_gcd(rand_num1, rand_num2)
     question_string = f"{rand_num1} {rand_num2}"
-    return (question_string, correct_answer)
+    return question_string, correct_answer
