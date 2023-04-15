@@ -20,10 +20,10 @@ def calculate_expression(expression):
 def get_game():
     """returns calc game data"""
 
-    num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    operator = random.choice(["+", "-", "*"])
-    expression = (num1, num2, operator)
+    rand_num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    rand_num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    rand_operator = random.choice(["+", "-", "*"])
+    expression = (rand_num1, rand_num2, rand_operator)
     correct_answer = calculate_expression(expression)
-    question_string = f"{num1} {operator} {num2}"
+    question_string = f"{rand_num1} {rand_operator} {rand_num2}"
     return (question_string, correct_answer)

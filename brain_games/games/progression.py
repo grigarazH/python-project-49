@@ -33,7 +33,7 @@ def get_question_string(prog, hidden_index):
 def get_game():
     """returns progression game data"""
 
-    length = random.randint(MIN_LENGTH, MAX_LENGTH)
+    prog_length = random.randint(MIN_LENGTH, MAX_LENGTH)
     hidden_index = random.randint(0, length - 1)
     progression_step = random.randint(PROGRESSION_MIN_STEP,
                                       PROGRESSION_MAX_STEP)

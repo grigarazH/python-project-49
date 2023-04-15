@@ -22,8 +22,8 @@ def get_gcd(a, b):
 def get_game():
     """returns gcd game data"""
 
-    num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    correct_answer = get_gcd(num1, num2)
-    question_string = f"{num1} {num2}"
+    rand_num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    rand_num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    correct_answer = get_gcd(rand_num1, rand_num2)
+    question_string = f"{rand_num1} {rand_num2}"
     return (question_string, correct_answer)
