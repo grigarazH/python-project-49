@@ -6,19 +6,16 @@ MAX_NUMBER = 100
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def get_correct_answer(question):
-    """returns correct answer for is even question"""
+def check_even(num):
+    """returns yes if num is even, otherwise returns no"""
 
-    return "yes" if question % 2 == 0 else "no"
-
-
-def get_question():
-    """returns random is even question"""
-
-    return random.randint(MIN_NUMBER, MAX_NUMBER)
+    return "yes" if num % 2 == 0 else "no"
 
 
-def get_question_string(question):
-    """returns even question string"""
+def get_game():
+    """returns even game data"""
 
-    return str(question)
+    num = random.randint(MIN_NUMBER, MAX_NUMBER)
+    correct_answer = check_even(num)
+    question_string = str(num)
+    return (question_string, correct_answer)

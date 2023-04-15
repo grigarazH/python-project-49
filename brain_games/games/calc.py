@@ -5,10 +5,10 @@ MAX_NUMBER = 100
 DESCRIPTION = "What is the result of the expression?"
 
 
-def get_correct_answer(question):
+def calculate_expression(expression):
     """returns correct answer for calc question"""
 
-    (num1, num2, operator) = question
+    (num1, num2, operator) = expression
     if operator == "+":
         return num1 + num2
     elif operator == "-":
@@ -17,16 +17,13 @@ def get_correct_answer(question):
         return num1 * num2
 
 
-def get_question():
-    """returns random calc question"""
+def get_game():
+    """returns calc game data"""
 
     num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     operator = random.choice(["+", "-", "*"])
-    return (num1, num2, operator)
-
-
-def get_question_string(question):
-    """returns calc question string"""
-    (num1, num2, operator) = question
-    return f"{num1} {operator} {num2}"
+    expression = (num1, num2, operator)
+    correct_answer = calculate_expression(expression)
+    question_string = f"{num1} {operator} {num2}"
+    return (question_string, correct_answer)

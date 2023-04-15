@@ -11,11 +11,9 @@ def play_game(game):
     question_count = 3
     i = 0
     while i < question_count:
-        question = game.get_question()
-        question_str = game.get_question_string(question)
-        print(f"Question: {question_str}")
+        (question_string, correct_answer) = game.get_game()
+        print(f"Question: {question_string}")
         answer = prompt.string("Your answer: ")
-        correct_answer = game.get_correct_answer(question)
         if str(answer) == str(correct_answer):
             print("Correct!")
         else:

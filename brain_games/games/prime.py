@@ -12,19 +12,16 @@ MAX_NUMBER = 271
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def get_correct_answer(question):
+def check_prime(num):
     """returns correct answer for prime question"""
 
-    return "yes" if question in PRIME_NUMBERS else "no"
+    return "yes" if num in PRIME_NUMBERS else "no"
 
 
-def get_question():
-    """returns random prime question"""
+def get_game():
+    """returns prime game data"""
 
-    return random.randint(MIN_NUMBER, MAX_NUMBER)
-
-
-def get_question_string(question):
-    """returns prime question string"""
-
-    return str(question)
+    num = random.randint(MIN_NUMBER, MAX_NUMBER)
+    correct_answer = check_prime(num)
+    question_string = str(num)
+    return (question_string, correct_answer)
