@@ -34,12 +34,13 @@ def get_game():
     """returns progression game data"""
 
     prog_length = random.randint(MIN_LENGTH, MAX_LENGTH)
-    hidden_index = random.randint(0, length - 1)
+    hidden_index = random.randint(0, prog_length - 1)
     progression_step = random.randint(PROGRESSION_MIN_STEP,
                                       PROGRESSION_MAX_STEP)
     progression_start = random.randint(PROGRESSION_START_MIN,
                                        PROGRESSION_START_MAX)
-    progression = get_progression(progression_start, progression_step, length)
+    progression = get_progression(progression_start,
+                                  progression_step, prog_length)
     correct_answer = progression[hidden_index]
     question_string = get_question_string(progression, hidden_index)
     return question_string, correct_answer
