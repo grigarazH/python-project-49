@@ -16,10 +16,10 @@ def play_game(game):
         answer = prompt.string("Your answer: ")
         if str(answer) == str(correct_answer):
             print("Correct!")
+            i += 1
         else:
             print((f"'{answer}' is wrong answer ;(. "
                    f"Correct answer was '{correct_answer}'."))
             print(f"Let's try again, {name}!")
             return
-        i += 1
     print(f"Congratulations, {name}!")
